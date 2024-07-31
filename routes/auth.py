@@ -1,6 +1,6 @@
 from app import app, db
 from flask import request, jsonify
-from models import User, AccsessTokens
+from database.models import User, AccsessTokens
 from helpers import generateToken
 
 
@@ -43,7 +43,6 @@ def logout():
     token = request.json.get('token')
     try:
         dbToken = db.session.query(AccsessTokens).filter(AccsessTokens.token == token).first()
-        print(dbToken)
         db.session.delete(dbToken)
         db.session.commit()
     except:

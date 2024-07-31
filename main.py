@@ -1,5 +1,5 @@
 from app import app
-from routes.routes import *
+from routes.gismeteoroutes import *
 from routes.auth import *
 
 

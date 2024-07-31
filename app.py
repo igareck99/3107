@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from config import Configuration
+from configs.config import Configuration
 from secretKeys import secret_key
 from flask_migrate import Migrate
 app = Flask(__name__)
