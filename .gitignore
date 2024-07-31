@@ -1,5 +1,5 @@
 app.db
 venv
-config/secretKeys.py
+secretKeys.py
 .idea
 __pycache__

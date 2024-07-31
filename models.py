@@ -14,3 +14,14 @@ class User(db.Model):
     @property
     def serialize(self):
         return {'id': self.id, 'name': self.name}
+
+class AccsessTokens(db.Model):
+    __tablename__ = "tokens"
+    id = db.Column(db.Integer, primary_key = True)
+    token = db.Column(db.String(50),
+                     nullable = False,
+                     unique = True)
+
+    @property
+    def serialize(self):
+        return {'id': self.id, 'token': self.token}

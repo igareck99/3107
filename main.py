@@ -1,5 +1,6 @@
 from app import app
 from routes.routes import *
+from routes.auth import *
 
 
 if __name__ == "__main__":
